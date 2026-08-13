@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio - Doris Navas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Doris Navas</a>
+      <img src="img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top me-2">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
         <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
@@ -21,9 +21,11 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero text-center text-white bg-primary py-5">
-    <h1>Hola, soy Doris Elieth Navas Mena</h1>
-    <p>Desarrolladora Full-Stack con experiencia en React, .NET, Laravel y más.</p>
+  <header class="hero">
+    <div class="container">
+      <h1>Hola, soy Doris Elieth Navas Mena</h1>
+      <p class="small muted">Desarrolladora Full-Stack con experiencia en React, .NET, Laravel y más.</p>
+    </div>
   </header>
 
 <section id="perfil" class="container my-5">
@@ -37,12 +39,17 @@
     <div class="col-md-6 mb-4">
       <div class="card h-100 shadow-sm">
         <div class="card-body">
-          <span class="badge bg-success mb-2">Proyecto destacado</span>
-          <h3 class="card-title">Videos editados</h3>
-          <p>Edición de videos para diversos clientes y proyectos.</p>
-          <p class="text-muted">Previsualización en miniatura del proyecto de edición de video.</p>
-          <a class="btn btn-primary me-2" href="https://canva.link/21jxweohh1ckfbu" target="_blank" rel="noopener noreferrer">Ver más</a>
-          <a class="btn btn-outline-secondary" href="https://canva.link/cd5jac5opsbrszt" target="_blank" rel="noopener noreferrer">Ver en Canva</a>
+            <span class="badge bg-success mb-2">Proyecto destacado</span>
+            <h3 class="card-title">Videos editados</h3>
+            <!-- Video insertado: coloca el archivo en media/edited-video.mp4 -->
+            <video class="project-video" controls poster="img/video-poster.jpg">
+              <source src="img/download.mp4" type="video/mp4">
+              Tu navegador no soporta la etiqueta de video.
+            </video>
+            <p>Edición de videos para diversos clientes y proyectos.</p>
+            <p class="text-muted">Previsualización del proyecto de edición de video. Usa el botón para reproducir.</p>
+            <a class="btn me-2" href="img/download.mp4" target="_blank" rel="noopener noreferrer">Descargar video</a>
+            <a class="btn" href="https://canva.link/cd5jac5opsbrszt" target="_blank" rel="noopener noreferrer">Ver en Canva</a>
         </div>
       </div>
     </div>
@@ -54,7 +61,7 @@
           <span class="badge bg-info mb-2">Prácticas universitarias</span>
           <h3 class="card-title">Office Lend</h3>
           <p>Proyecto backend con Spring Boot y MySQL para gestión de usuarios, equipos y préstamos. Incluye autenticación JWT y control de roles.</p>
-          <a class="btn btn-primary" href="https://github.com/xandro2021/BackEndProyecto1LenguajesOfficeLend.git" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
+          <a class="btn" href="https://github.com/xandro2021/BackEndProyecto1LenguajesOfficeLend.git" target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
         </div>
       </div>
     </div>
@@ -67,8 +74,8 @@
   <p>LinkedIn: <a href="https://www.linkedin.com/in/doris-navas-mena-967050a3" target="_blank" rel="noopener noreferrer">Perfil</a></p>
 </section>
 
-<footer class="bg-light text-center py-3">
-  <p>&copy; 2026 Doris Navas - Portafolio</p>
+<footer class="card small muted text-center py-3">
+  <div class="container">&copy; 2026 Doris Navas - Portafolio</div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
